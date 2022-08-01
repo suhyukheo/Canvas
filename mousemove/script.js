@@ -23,9 +23,6 @@ canvas.addEventListener('mousemove',(e)=>{
 
 })
 
- canvas.addEventListener('touchstart',()=>{
-
- })
 
   canvas.addEventListener('touchmove',(e)=>{
     mouse.x = e.touches[0].screenX
@@ -54,7 +51,7 @@ class Particle{
   update(){
     this.x+=this.speedx
     this.y+=this.speedy
-    if(this.size > 0.2)  this.size-= 0.1
+    if(this.size > 0.2)  this.size-= 0.05
   }
   draw(){
     ctx.fillStyle=this.color
