@@ -10,7 +10,7 @@ window.onload = () =>{
     canvas.width = document.body.clientWidth * window.devicePixelRatio
     canvas.height =document.body.clientHeight * window.devicePixelRatio
     console.log(canvas.width)
-    ploygon1 = new Polygon(canvas.width/2 ,canvas.height/2 ,canvas.height/3,5)
+    ploygon1 = new Polygon(canvas.width/2 ,canvas.height/2 ,canvas.width/3,5)
   })
 
   document.querySelector('#btn').addEventListener('click',()=>{
@@ -27,17 +27,17 @@ window.onload = () =>{
   canvas.addEventListener('pointerdown', (e) =>{
     point.on=true
     point.start = e.x
-  })
+  },false)
   
   canvas.addEventListener('pointermove',function(e){ //mouse이벤트와 touch이벤트를 동시에.. !!
     if(point.on === true){
       point.x=((e.x-point.start)/100)
     } 
-  })
+  },false)
 
   canvas.addEventListener('pointerup' , (e)=>{
     point.on =false
-  })
+  },false)
 
 
   function point() {
